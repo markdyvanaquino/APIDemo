@@ -1,0 +1,28 @@
+﻿@model ICollection<Demo.Common.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Products</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>@Html.ActionLink("Add","Add","Products")</th>
+        <th>&nbsp;</th>
+    </tr>
+    @foreach ( var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <th>@Html.ActionLink("Edit", "Edit", "Products", new { id = product.Id }, null)</th>
+            <th>@Html.ActionLink("Delete", "Delete", "Products", new { id = product.Id },null)</th>
+
+        </tr>
+
+    }
+</table>

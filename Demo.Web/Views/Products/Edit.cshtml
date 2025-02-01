@@ -1,0 +1,26 @@
+﻿@model Demo.Common.Product
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm("updateProduct", "Products", FormMethod.Post))
+{
+    <div class="form-group row">
+        <label>ID</label>
+        @Html.DisplayFor(m => m.Id)
+        @Html.HiddenFor(m => m.Id)
+    </div>
+    <div class="form-group row">
+        <label>Name</label>
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div class="form-group row">
+        <label>Price</label>
+        @Html.TextBoxFor(m => m.Price)
+    </div>
+    <div class="form-group row">
+        <input type="button" value="Cancel" onclick="javaScript:window.history.go(-1);" class="btn btn-primary" />
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+}

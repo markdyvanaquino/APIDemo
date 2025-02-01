@@ -1,0 +1,22 @@
+﻿@model Demo.Common.Product 
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+@using (Html.BeginForm("addProduct", "Products", new { product = Model }, FormMethod.Post))
+{
+<div class="form-group row">
+    <label class="col-sm-1 form-control-label">Name</label>
+    @Html.TextBoxFor(m => m.Name)
+</div>
+<div class="form-group row">
+    <label class="col-sm-1 form-control-label">Price</label>
+    @Html.TextBoxFor(m => m.Price)
+</div>
+<div class="form-group row">
+    <input type="button" value="Cancel" onclick="javaScript:window.history.go(-1);" class="btn btn-primary" />
+    <input type="submit" value="Submit" class="btn btn-primary" />
+</div>
+}
+
