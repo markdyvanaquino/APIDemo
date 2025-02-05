@@ -1,0 +1,23 @@
+﻿<div ng-init="loadDelete();">
+    <h2>Delete</h2>
+    <form>
+        <fieldset>
+            <div class="form-group row">
+                <label for="id" class="col-sm-1 form-control-label">Id</label>
+                    <input type="text" disabled id="id" name="id" value="{{selectedProduct.Id}}" />
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-1 form-control-label">Name</label>
+                    <input type="text" disabled id="name" name="name" value="{{selectedProduct.Name}}" />
+            </div>
+            <div class="form-group row">
+                <label for="price" class="col-sm-1 form-control-label">Price</label>
+                    <input type="text" disabled id="price" name="price" value="{{selectedProduct.Price}}" />
+            </div>
+            <div class="form-group row">
+                <input type="button" value="Cancel" ng-click="go('/');" class="btn btn-primary" />
+                <input type="submit" value="Submit" ng-click="deleteProduct(selectedProduct.Id);" class="btn btn-primary" />
+            </div>
+        </fieldset>
+     </form>
+</div>

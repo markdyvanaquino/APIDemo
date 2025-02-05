@@ -1,0 +1,19 @@
+﻿<div ng-init="init();">
+    <h2>Products</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th><input type="button" ng-click="go('/Add');" value="Add" class="btn-primary" /></th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr ng-repeat="product in products">
+            <td>{{product.Id}}</td>
+            <td>{{product.Name}}</td>
+            <td>{{product.Price}}</td>
+            <th><input type="button" ng-click="go('/' + product.Id + '/Edit');" value="Edit" class="btn-xs btn-success" /></th>
+            <th><input type="button" ng-click="go('/' + product.Id + '/Delete')" value="Delete" class="btn-xs btn-danger" /></th>
+        </tr>
+    </table>
+</div>

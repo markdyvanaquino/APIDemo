@@ -1,0 +1,19 @@
+﻿<div ng-init="loadAdd();">
+    <h2>Add</h2>
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label class="col-sm-1 form-control-label">Name</label>
+                <input type="text" id="name" name="name" ng-model="selectedProduct.Name" />
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 form-control-label">Price</label>
+                <input type="text" id="price" name="price" ng-model="selectedProduct.Price" />
+            </div>
+            <div class="form-group">
+                <input type="button" value="Cancel" ng-click="go('/');" class="btn btn-primary" />
+                <input type="submit" value="Submit" ng-click="addProduct(selectedProduct);" class="btn btn-primary" />
+            </div>
+        </fieldset>
+</form>
+</div>
